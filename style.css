@@ -68,11 +68,6 @@ body {
 
 /* below this line is CSS for the layout */
 
-/* this is a CSS comment
-to uncomment a line of CSS, remove the * and the /
-before and after the text */
-
-
 /* the "container" is what wraps your entire website */
 /* if you want something (like the header) to be Wider than
 the other elements, you will need to move that div outside
@@ -84,6 +79,11 @@ of the container */
 and change the media query according to the comment! */
     margin: 0 auto;
     /* this centers the entire page */
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* the area below is for all links on your page
@@ -141,6 +141,9 @@ you can add them directly to the <div id="header"></div> element! */
 /* navigation link when a link is hovered over */
 #navbar li a:hover {
     color: #a49cba;
+}
+
+a:hover {
     text-shadow: 0 0 5px var(--text-light);
 }
 
@@ -290,4 +293,70 @@ feel free to play around with the order!
 
 .round:hover {
     box-shadow: 0 0 15px var(--bg-light);
+}
+
+/* BLOG ENTRIES */
+#entry-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blog-entry {
+    max-width: 320px;
+}
+
+.blog-entry-image {
+    width: 315px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.blog-entry-banner {
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.blog-entry-content {
+    display: flex;
+    flex-direction: column;
+    p {
+        text-align: justify;
+    }
+}
+
+.centered {
+    align-self: center;
+}
+
+/* MEMBERS */
+.horizontal-body {
+    display: flex;
+    flex-direction: row;
+
+    img {
+        margin: 6px;
+        border-radius: 100%;
+    }
+}
+
+.expand-container {
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.expand-contract {
+    margin-top: -100%;
+    transition: all 0.5s ease-in-out;
+}
+  
+.expand-contract.expanded {
+    margin-top: 0;
+}
+
+.clickable:hover {
+    cursor: pointer;
+    text-shadow: 0 0 5px var(--text-light);
 }

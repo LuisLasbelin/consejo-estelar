@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consejo Estelar</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="headerArea">
+            <div id="header"></div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="#">Miembros</a></li>
+                    <li><a href="/youtube.html">YouTube</a></li>
+                    <li><a href="/blog.html">Diario</a></li>
+                    <li><a href="/proyectos.html">Proyectos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="flex">
+            <div id="entry-body"></div>
+            <main>
+                <h1>Miembros del Consejo Estelar</h1>
+                <p>Puedes pulsar en los nombres para ver los perfiles.</p>
+                <script type="text/javascript" src="members.js"></script>
+                <div class="box">
+                    <h2 class="clickable" onclick="toggleExpand(this)">Luis "Lasbelin" Belloch</h2>
+                    <div class="horizontal-body">
+                        <img width="120px" height="120px" src="/public/luis.png" alt="Foto de Luis Belloch" />
+                        <div>
+                            <p>El administrador de esta página y del Consejo Estelar. Es el creador de la mayoría de los
+                                juegos
+                                que se publican en esta página.
+                            </p>
+                            <p>
+                                Intereses: Juegos de rol, Tecnologías Interactivas, Programación, Diseño de Juegos,
+                                Música, Anime,
+                            </p>
+                        </div>
+                    </div>
+                    <div class="expand-container">
+                        <h3 class="expand-contract">Formación</h3>
+                        <h4>Tecnologías Interactivas</h4>
+                        <p>2019 - 2022</p>
+                        <p>Desarrollo de tecnologías web, aplicaciones móviles, videojuegos, UX, robótica (ROSS).</p>
+                        <h3 class="expand-contract">Experiencia</h3>
+                        <h4>Programador web en Gesinen</h4>
+                        <p>2022</p>
+                        <p>Desarrollo de una aplicación web administrativa para sistemas de IoT, incluyendo backend
+                            y frontend usando Node, React y SQL.</p>
+
+                    </div>
+                </div>
+            </main>
+            <aside id="rightSidebar">
+                <script type="text/javascript" src="sidebar.js"></script>
+            </aside>
+        </div>
+        <footer id="footer">CC0 Public Domain, 2022</footer>
+    </div>
+</body>
+
+</html>
