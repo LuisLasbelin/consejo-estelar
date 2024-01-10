@@ -7,7 +7,7 @@ these tended to confuse some people, so I only kept
 the images as variables */
 
 :root {
-    --header-image: url('https://sadhost.neocities.org/images/layouts/wp.jpeg');
+    --header-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6c/Heic0411a.jpg');
     --body-bg-image: url('/public/stars.gif');
 
     /* colors */
@@ -73,12 +73,14 @@ body {
 the other elements, you will need to move that div outside
 of the container */
 #container {
-    max-width: 900px;
-    /* this is the width of your layout! */
-    /* if you change the above value, scroll to the bottom
-and change the media query according to the comment! */
+    width: 100%;
     margin: 0 auto;
-    /* this centers the entire page */
+    @media screen and (min-width: 1000px) {
+        width: 900px;
+    }
+    @media screen and (min-width: 1444px) {
+        width: 1080px;
+    }
 }
 
 a {
@@ -220,6 +222,11 @@ strong {
     padding: 10px;
 }
 
+.box-banner {
+    width: 100%;
+    height: auto;
+}
+
 /* CSS for extras */
 
 #topBar {
@@ -286,6 +293,7 @@ feel free to play around with the order!
         justify-content: center;
     }
 }
+
 
 .round {
     border-radius: 100%;
