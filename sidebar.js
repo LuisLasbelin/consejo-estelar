@@ -9,9 +9,4 @@ document.getElementById('rightSidebar').innerHTML = `<h2>Novedades</h2>
 <h2>Contacto</h2>
 <p>Al habla Luis "Lasbelin" Belloch, soy el administrador de esta página y del Consejo Estelar. Puedes
     contactarme por <a href="mailto:bellochluis@gmail.com">bellochluis@gmail.com</a></p>
-<h3>Boletín</h3>
-<form action='bellochluis@gmail.com' method='POST' enctype='text/plain' mail='@'>
-    <label for="mail">Mail:</label><br>
-    <input type="text" id="mail" name="mail"><br>
-    <input type="submit" value="Send">
-</form>`
+`
