@@ -1,13 +1,5 @@
-/* user styles */
-
-/* styles are what change the color and sizes of stuff on your site. */
-
-/* these are variables that are being used in the code
-these tended to confuse some people, so I only kept 
-the images as variables */
-
 :root {
-    --header-image: url('https://sadhost.neocities.org/images/layouts/wp.jpeg');
+    --header-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6c/Heic0411a.jpg');
     --body-bg-image: url('/public/stars.gif');
 
     /* colors */
@@ -16,17 +8,6 @@ the images as variables */
     --bg-light: #13092D;
     --text-light: #ED64F5
 }
-
-/* if you have the URL of a font, you can set it below */
-/* feel free to delete this if it's not your vibe */
-
-/* this seems like a lot for just one font and I would have to agree 
-but I wanted to include an example of how to include a custom font.
-If you download a font file you can upload it onto your Neocities
-and then link it! Many fonts have separate files for each style
-(bold, italic, etc. T_T) which is why there are so many!
-
-*/
 
 @font-face {
     font-family: Nunito;
@@ -68,22 +49,20 @@ body {
 
 /* below this line is CSS for the layout */
 
-/* this is a CSS comment
-to uncomment a line of CSS, remove the * and the /
-before and after the text */
-
-
-/* the "container" is what wraps your entire website */
-/* if you want something (like the header) to be Wider than
-the other elements, you will need to move that div outside
-of the container */
 #container {
-    max-width: 900px;
-    /* this is the width of your layout! */
-    /* if you change the above value, scroll to the bottom
-and change the media query according to the comment! */
+    width: 100%;
     margin: 0 auto;
-    /* this centers the entire page */
+    @media screen and (min-width: 1000px) {
+        width: 900px;
+    }
+    @media screen and (min-width: 1444px) {
+        width: 1080px;
+    }
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* the area below is for all links on your page
@@ -141,6 +120,9 @@ you can add them directly to the <div id="header"></div> element! */
 /* navigation link when a link is hovered over */
 #navbar li a:hover {
     color: #a49cba;
+}
+
+a:hover {
     text-shadow: 0 0 5px var(--text-light);
 }
 
@@ -170,12 +152,6 @@ main {
     padding: 20px;
     order: 2;
 }
-
-/* what's this "order" stuff about??
-allow me to explain!
-if you're using both sidebars, the "order" value
-tells the CSS the order in which to display them.
-left sidebar is 1, content is 2, and right sidebar is 3! */
 
 */ #leftSidebar {
     order: 1;
@@ -217,6 +193,11 @@ strong {
     padding: 10px;
 }
 
+.box-banner {
+    width: 100%;
+    height: auto;
+}
+
 /* CSS for extras */
 
 #topBar {
@@ -229,13 +210,6 @@ strong {
 
 
 /* BELOW THIS POINT IS MEDIA QUERY */
-
-/* so you wanna change the width of your page? 
-by default, the container width is 900px.
-in order to keep things responsive, take your new height,
-and then subtrack it by 100. use this new number as the 
-"max-width" value below
-*/
 
 @media only screen and (max-width: 800px) {
     #flex {
@@ -284,10 +258,77 @@ feel free to play around with the order!
     }
 }
 
+
 .round {
     border-radius: 100%;
 }
 
 .round:hover {
     box-shadow: 0 0 15px var(--bg-light);
+}
+
+/* BLOG ENTRIES */
+#entry-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blog-entry {
+    max-width: 320px;
+}
+
+.blog-entry-image {
+    width: 315px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.blog-entry-banner {
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.blog-entry-content {
+    display: flex;
+    flex-direction: column;
+    p {
+        text-align: justify;
+    }
+}
+
+.centered {
+    align-self: center;
+}
+
+/* MEMBERS */
+.horizontal-body {
+    display: flex;
+    flex-direction: row;
+
+    img {
+        margin: 6px;
+        border-radius: 100%;
+    }
+}
+
+.expand-container {
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.expand-contract {
+    margin-top: -100%;
+    transition: all 0.5s ease-in-out;
+}
+  
+.expand-contract.expanded {
+    margin-top: 0;
+}
+
+.clickable:hover {
+    cursor: pointer;
+    text-shadow: 0 0 5px var(--text-light);
 }

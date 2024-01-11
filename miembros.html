@@ -20,20 +20,34 @@
             <nav id="navbar">
                 <ul>
                     <li><a href="/index.html">Inicio</a></li>
-                    <li><a href="/miembros.html">Miembros</a></li>
+                    <li><a href="#">Miembros</a></li>
                     <li><a href="/youtube.html">YouTube</a></li>
-                    <li><a href="#">Diario</a></li>
+                    <li><a href="/blog.html">Diario</a></li>
                     <li><a href="/proyectos.html">Proyectos</a></li>
                 </ul>
             </nav>
         </div>
 
         <div id="flex">
+            <div id="entry-body"></div>
             <main>
-                <h1>Diario</h1>
-                <p><strong>Suscríbete para enterarte de las novedades</strong></p>
-                <div id="entry-list"></div>
-                <script src="writeblogentries.js" type="text/javascript"></script>
+                <h1>Miembros del Consejo Estelar</h1>
+                <script type="text/javascript" src="members.js"></script>
+                <div class="box">
+                    <h2 class="clickable" onclick="toggleExpand(this)">Luis Lasbelin</h2>
+                    <div class="horizontal-body">
+                        <img width="120px" height="120px" src="https://pbs.twimg.com/profile_images/1609876603613347841/2SJyHs1w_400x400.jpg" alt="Foto de Luis Belloch" />
+                        <div>
+                            <p>El administrador de esta página y del Consejo Estelar. Es el creador de la mayoría de los
+                                juegos
+                                que se publican en esta página.
+                            </p>
+                            <p>
+                                <a href="https://twitter.com/luislasbelin" target="_blank" rel="noopener">Twitter</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </main>
             <aside id="rightSidebar">
                 <script type="text/javascript" src="sidebar.js"></script>

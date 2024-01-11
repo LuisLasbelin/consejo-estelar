@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" lang="es_ES">
     <title>Consejo Estelar</title>
     <!-- The style.css file allows you to change the look of your web pages.
          If you include the next line in all your web pages, they will all share the same look.
@@ -22,19 +22,16 @@
                     <li><a href="/index.html">Inicio</a></li>
                     <li><a href="/miembros.html">Miembros</a></li>
                     <li><a href="/youtube.html">YouTube</a></li>
-                    <li><a href="#">Diario</a></li>
-                    <li><a href="/proyectos.html">Proyectos</a></li>
+                    <li><a href="/blog.html">Diario</a></li>
+                    <li><a href="#">Proyectos</a></li>
+                    <li><a href="#">Contacto</a></li>
                 </ul>
             </nav>
         </div>
 
         <div id="flex">
-            <main>
-                <h1>Diario</h1>
-                <p><strong>Suscríbete para enterarte de las novedades</strong></p>
-                <div id="entry-list"></div>
-                <script src="writeblogentries.js" type="text/javascript"></script>
-            </main>
+            <div id="entry-body"></div>
+            <script src="writeblogentry.js" type="text/javascript"></script>
             <aside id="rightSidebar">
                 <script type="text/javascript" src="sidebar.js"></script>
             </aside>
